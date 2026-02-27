@@ -107,6 +107,42 @@
      SECTOR_END
   };
 #endif
+
+	#ifdef STM32WBA2x_512K_Secure
+  struct FlashDevice const FlashDevice  =  {
+     FLASH_DRV_VERS,             // Driver Version, do not modify!
+     "STM32WBA2x 512K Secure Flash",       // Device Name
+     ONCHIP,                     // Device Type
+     0x0C000000,                 // Device Start Address
+     0x00080000,                 // Device Size in Bytes (512k)
+     1024,                       // Programming Page Size
+     0,                          // Reserved, must be 0
+     0xFF,                       // Initial Content of Erased Memory
+     400,                        // Program Page Timeout 400 mSec
+     400,                        // Erase Sector Timeout 400 mSec
+     // Specify Size and Address of Sectors
+     0x1000, 0x000000,           // Sector Size 8kB       
+     SECTOR_END
+  };
+#endif
+	#ifdef STM32WBA2x_512K_NSecure
+  struct FlashDevice const FlashDevice  =  {
+     FLASH_DRV_VERS,             // Driver Version, do not modify!
+     "STM32WBA2x 512K NSecure Flash",       // Device Name
+     ONCHIP,                     // Device Type
+     0x08000000,                 // Device Start Address
+     0x00080000,                 // Device Size in Bytes (512K)
+     1024,                       // Programming Page Size
+     0,                          // Reserved, must be 0
+     0xFF,                       // Initial Content of Erased Memory
+     400,                        // Program Page Timeout 400 mSec
+     400,                        // Erase Sector Timeout 400 mSec
+     // Specify Size and Address of Sectors
+     0x1000, 0x000000,           // Sector Size 4kB       
+     SECTOR_END
+  };
+#endif	
+	
 #ifdef STM32WBAxx_2048_Secure
   struct FlashDevice const FlashDevice  =  {
      FLASH_DRV_VERS,             // Driver Version, do not modify!

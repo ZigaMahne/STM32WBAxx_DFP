@@ -18,7 +18,7 @@ Copyright (c) 2025 STMicroelectronics.
 -->
 <device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.1" xsi:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
   <name>STM32WBA64</name>
-  <version>1.0</version>
+  <version>1.1</version>
   <description>STM32WBA64</description>
   <cpu>
     <name>CM33</name>
@@ -95356,7 +95356,7 @@ Flash ECC single error correction interrupt</description>
       </registers>
     </peripheral>
     <peripheral derivedFrom="I2C1">
-      <name>SEC_I2C</name>
+      <name>SEC_I2C1</name>
       <baseAddress>0x50005400</baseAddress>
     </peripheral>
     <peripheral derivedFrom="I2C1">
@@ -149629,7 +149629,7 @@ Flash ECC single error correction interrupt</description>
       </registers>
     </peripheral>
     <peripheral derivedFrom="SPI1">
-      <name>SEC_SPI</name>
+      <name>SEC_SPI1</name>
       <baseAddress>0x50013000</baseAddress>
     </peripheral>
     <peripheral derivedFrom="SPI1">
@@ -178459,7 +178459,7 @@ Flash ECC single error correction interrupt</description>
       </registers>
     </peripheral>
     <peripheral derivedFrom="USART1">
-      <name>SEC_USART</name>
+      <name>SEC_USART1</name>
       <baseAddress>0x50013800</baseAddress>
     </peripheral>
     <peripheral derivedFrom="USART1">

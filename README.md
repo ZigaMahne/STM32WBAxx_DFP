@@ -1,6 +1,6 @@
 [![Version](https://img.shields.io/github/v/release/Open-CMSIS-Pack/STM32WBAxx_DFP?label=Release)](https://github.com/Open-CMSIS-Pack/STM32WBAxx_DFP/releases/latest)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-green?label=License)](https://github.com/Open-CMSIS-Pack/STM32WBAxx_DFP/blob/main/LICENSE)
-[![Build pack](https://img.shields.io/github/actions/workflow/status/Open-CMSIS-Pack/STM32WB0x_DFP/pack.yml?logo=arm&logoColor=0091bd&label=Build%20pack)](./.github/workflows/pack.yml)
+[![Build pack](https://img.shields.io/github/actions/workflow/status/Open-CMSIS-Pack/STM32WBAxx_DFP/pack.yml?logo=arm&logoColor=0091bd&label=Build%20pack)](./.github/workflows/pack.yml)
 
 # STM32WBAxx_DFP
 

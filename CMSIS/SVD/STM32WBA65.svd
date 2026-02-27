@@ -2829,7 +2829,7 @@ Copyright (c) 2025 STMicroelectronics.
       </registers>
     </peripheral>
     <peripheral derivedFrom="ADC4">
-      <name>SEC_ADC</name>
+      <name>SEC_ADC4</name>
       <baseAddress>0x56021000</baseAddress>
     </peripheral>
     <peripheral>
@@ -47884,6 +47884,3000 @@ Flash ECC single error correction interrupt</description>
     <peripheral derivedFrom="GPIOE">
       <name>SEC_GPIOE</name>
       <baseAddress>0x52021000</baseAddress>
+    </peripheral>
+    <peripheral>
+      <name>GPIOG</name>
+      <description>GPIOG address block description</description>
+      <groupName>GPIOG</groupName>
+      <baseAddress>0x42021800</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x34</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>GPIOG_MODER</name>
+          <displayName>GPIOG_MODER</displayName>
+          <description>GPIO port G mode register</description>
+          <addressOffset>0x000</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0xFFFFFFF0</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>MODE2</name>
+              <description>Port configuration I/O pin 2</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MODE3</name>
+              <description>Port configuration I/O pin 3</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MODE4</name>
+              <description>Port configuration I/O pin 4</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MODE5</name>
+              <description>Port configuration I/O pin 5</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MODE6</name>
+              <description>Port configuration I/O pin 6</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MODE7</name>
+              <description>Port configuration I/O pin 7</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MODE8</name>
+              <description>Port configuration I/O pin 8</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MODE9</name>
+              <description>Port configuration I/O pin 9</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MODE10</name>
+              <description>Port configuration I/O pin 10</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MODE11</name>
+              <description>Port configuration I/O pin 11</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MODE12</name>
+              <description>Port configuration I/O pin 12</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MODE13</name>
+              <description>Port configuration I/O pin 13</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MODE14</name>
+              <description>Port configuration I/O pin 14</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MODE15</name>
+              <description>Port G configuration I/O pin 15
+</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Input mode</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>General purpose output mode</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x2</name>
+                  <description>Alternate function mode</description>
+                  <value>0x2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x3</name>
+                  <description>Analog mode (reset state)</description>
+                  <value>0x3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIOG_OTYPER</name>
+          <displayName>GPIOG_OTYPER</displayName>
+          <description>GPIO port G output type register</description>
+          <addressOffset>0x004</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>OT2</name>
+              <description>Port configuration I/O pin y
+</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Output push-pull (reset state)</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Output open-drain</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>OT3</name>
+              <description>Port configuration I/O pin y
+</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Output push-pull (reset state)</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Output open-drain</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>OT4</name>
+              <description>Port configuration I/O pin y
+</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Output push-pull (reset state)</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Output open-drain</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>OT5</name>
+              <description>Port configuration I/O pin y
+</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Output push-pull (reset state)</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Output open-drain</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>OT6</name>
+              <description>Port configuration I/O pin y
+</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Output push-pull (reset state)</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Output open-drain</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>OT7</name>
+              <description>Port configuration I/O pin y
+</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Output push-pull (reset state)</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Output open-drain</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>OT8</name>
+              <description>Port configuration I/O pin y
+</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Output push-pull (reset state)</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Output open-drain</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>OT9</name>
+              <description>Port configuration I/O pin y
+</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Output push-pull (reset state)</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Output open-drain</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>OT10</name>
+              <description>Port configuration I/O pin y
+</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Output push-pull (reset state)</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Output open-drain</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>OT11</name>
+              <description>Port configuration I/O pin y
+</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Output push-pull (reset state)</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Output open-drain</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>OT12</name>
+              <description>Port configuration I/O pin y
+</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Output push-pull (reset state)</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Output open-drain</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>OT13</name>
+              <description>Port configuration I/O pin y
+</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Output push-pull (reset state)</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Output open-drain</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>OT14</name>
+              <description>Port configuration I/O pin y
+</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Output push-pull (reset state)</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Output open-drain</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>OT15</name>
+              <description>Port configuration I/O pin y
+</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Output push-pull (reset state)</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Output open-drain</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIOG_OSPEEDR</name>
+          <displayName>GPIOG_OSPEEDR</displayName>
+          <description>GPIO port G output speed register</description>
+          <addressOffset>0x008</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>OSPEED2</name>
+              <description>Port configuration I/O pin 2</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OSPEED3</name>
+              <description>Port configuration I/O pin 3</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OSPEED4</name>
+              <description>Port configuration I/O pin 4</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OSPEED5</name>
+              <description>Port configuration I/O pin 5</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OSPEED6</name>
+              <description>Port configuration I/O pin 6</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OSPEED7</name>
+              <description>Port configuration I/O pin 7</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OSPEED8</name>
+              <description>Port configuration I/O pin 8</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OSPEED9</name>
+              <description>Port configuration I/O pin 9</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OSPEED10</name>
+              <description>Port configuration I/O pin 10</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OSPEED11</name>
+              <description>Port configuration I/O pin 11</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OSPEED12</name>
+              <description>Port configuration I/O pin 12</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OSPEED13</name>
+              <description>Port configuration I/O pin 13</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OSPEED14</name>
+              <description>Port configuration I/O pin 14</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OSPEED15</name>
+              <description>Port configuration I/O pin 15
+</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Low speed</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Medium speed</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x2</name>
+                  <description>High speed</description>
+                  <value>0x2</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIOG_PUPDR</name>
+          <displayName>GPIOG_PUPDR</displayName>
+          <description>GPIO port G pull-up/pull-down register</description>
+          <addressOffset>0x00C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>PUPD2</name>
+              <description>Port configuration I/O pin 2</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PUPD3</name>
+              <description>Port configuration I/O pin 3</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PUPD4</name>
+              <description>Port configuration I/O pin 4</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PUPD5</name>
+              <description>Port configuration I/O pin 5</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PUPD6</name>
+              <description>Port configuration I/O pin 6</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PUPD7</name>
+              <description>Port configuration I/O pin 7</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PUPD8</name>
+              <description>Port configuration I/O pin 8</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PUPD9</name>
+              <description>Port configuration I/O pin 9</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PUPD10</name>
+              <description>Port configuration I/O pin 10</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PUPD11</name>
+              <description>Port configuration I/O pin 11</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PUPD12</name>
+              <description>Port configuration I/O pin 12</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PUPD13</name>
+              <description>Port configuration I/O pin 13</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PUPD14</name>
+              <description>Port configuration I/O pin 14</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PUPD15</name>
+              <description>Port configuration I/O pin 15
+</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No pull-up, pull-down</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Pull-up</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x2</name>
+                  <description>Pull-down</description>
+                  <value>0x2</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIOG_IDR</name>
+          <displayName>GPIOG_IDR</displayName>
+          <description>GPIO port G input data register</description>
+          <addressOffset>0x010</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFF0FFF</resetMask>
+          <fields>
+            <field>
+              <name>ID2</name>
+              <description>Port input data I/O pin y
+</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ID3</name>
+              <description>Port input data I/O pin y
+</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ID4</name>
+              <description>Port input data I/O pin y
+</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ID5</name>
+              <description>Port input data I/O pin y
+</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ID6</name>
+              <description>Port input data I/O pin y
+</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ID7</name>
+              <description>Port input data I/O pin y
+</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ID8</name>
+              <description>Port input data I/O pin y
+</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ID9</name>
+              <description>Port input data I/O pin y
+</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ID10</name>
+              <description>Port input data I/O pin y
+</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ID11</name>
+              <description>Port input data I/O pin y
+</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ID12</name>
+              <description>Port input data I/O pin y
+</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ID13</name>
+              <description>Port input data I/O pin y
+</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ID14</name>
+              <description>Port input data I/O pin y
+</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ID15</name>
+              <description>Port input data I/O pin y
+</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIOG_ODR</name>
+          <displayName>GPIOG_ODR</displayName>
+          <description>GPIO port G output data register</description>
+          <addressOffset>0x014</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>OD2</name>
+              <description>Port output data I/O pin y
+</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OD3</name>
+              <description>Port output data I/O pin y
+</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OD4</name>
+              <description>Port output data I/O pin y
+</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OD5</name>
+              <description>Port output data I/O pin y
+</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OD6</name>
+              <description>Port output data I/O pin y
+</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OD7</name>
+              <description>Port output data I/O pin y
+</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OD8</name>
+              <description>Port output data I/O pin y
+</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OD9</name>
+              <description>Port output data I/O pin y
+</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OD10</name>
+              <description>Port output data I/O pin y
+</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OD11</name>
+              <description>Port output data I/O pin y
+</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OD12</name>
+              <description>Port output data I/O pin y
+</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OD13</name>
+              <description>Port output data I/O pin y
+</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OD14</name>
+              <description>Port output data I/O pin y
+</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OD15</name>
+              <description>Port output data I/O pin y
+</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIOG_BSRR</name>
+          <displayName>GPIOG_BSRR</displayName>
+          <description>GPIO port G bit set/reset register</description>
+          <addressOffset>0x018</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>BS2</name>
+              <description>Port set I/O pin y
+</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Sets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BS3</name>
+              <description>Port set I/O pin y
+</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Sets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BS4</name>
+              <description>Port set I/O pin y
+</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Sets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BS5</name>
+              <description>Port set I/O pin y
+</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Sets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BS6</name>
+              <description>Port set I/O pin y
+</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Sets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BS7</name>
+              <description>Port set I/O pin y
+</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Sets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BS8</name>
+              <description>Port set I/O pin y
+</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Sets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BS9</name>
+              <description>Port set I/O pin y
+</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Sets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BS10</name>
+              <description>Port set I/O pin y
+</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Sets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BS11</name>
+              <description>Port set I/O pin y
+</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Sets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BS12</name>
+              <description>Port set I/O pin y
+</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Sets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BS13</name>
+              <description>Port set I/O pin y
+</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Sets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BS14</name>
+              <description>Port set I/O pin y
+</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Sets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BS15</name>
+              <description>Port set I/O pin y
+</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Sets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BR2</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Resets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BR3</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Resets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BR4</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Resets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BR5</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Resets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BR6</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Resets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BR7</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Resets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BR8</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Resets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BR9</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Resets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BR10</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Resets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BR11</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Resets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BR12</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Resets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BR13</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Resets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BR14</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Resets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BR15</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Resets the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIOG_LCKR</name>
+          <displayName>GPIOG_LCKR</displayName>
+          <description>GPIO port G configuration lock register</description>
+          <addressOffset>0x01C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>LCK2</name>
+              <description>Port lock I/O pin y
+</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Port configuration not locked</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Port configuration locked</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>LCK3</name>
+              <description>Port lock I/O pin y
+</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Port configuration not locked</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Port configuration locked</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>LCK4</name>
+              <description>Port lock I/O pin y
+</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Port configuration not locked</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Port configuration locked</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>LCK5</name>
+              <description>Port lock I/O pin y
+</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Port configuration not locked</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Port configuration locked</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>LCK6</name>
+              <description>Port lock I/O pin y
+</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Port configuration not locked</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Port configuration locked</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>LCK7</name>
+              <description>Port lock I/O pin y
+</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Port configuration not locked</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Port configuration locked</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>LCK8</name>
+              <description>Port lock I/O pin y
+</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Port configuration not locked</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Port configuration locked</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>LCK9</name>
+              <description>Port lock I/O pin y
+</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Port configuration not locked</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Port configuration locked</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>LCK10</name>
+              <description>Port lock I/O pin y
+</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Port configuration not locked</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Port configuration locked</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>LCK11</name>
+              <description>Port lock I/O pin y
+</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Port configuration not locked</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Port configuration locked</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>LCK12</name>
+              <description>Port lock I/O pin y
+</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Port configuration not locked</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Port configuration locked</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>LCK13</name>
+              <description>Port lock I/O pin y
+</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Port configuration not locked</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Port configuration locked</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>LCK14</name>
+              <description>Port lock I/O pin y
+</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Port configuration not locked</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Port configuration locked</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>LCK15</name>
+              <description>Port lock I/O pin y
+</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Port configuration not locked</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Port configuration locked</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>LCKK</name>
+              <description>Lock key
+</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>Port configuration lock key not active</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Port configuration lock key active.</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIOG_AFRL</name>
+          <displayName>GPIOG_AFRL</displayName>
+          <description>GPIO port G alternate function low register</description>
+          <addressOffset>0x020</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>AFSEL2</name>
+              <description>Alternate function selection for port I/O pin 2</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AFSEL3</name>
+              <description>Alternate function selection for port I/O pin 3</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AFSEL4</name>
+              <description>Alternate function selection for port I/O pin 4</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AFSEL5</name>
+              <description>Alternate function selection for port I/O pin 5</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AFSEL6</name>
+              <description>Alternate function selection for port I/O pin 6</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AFSEL7</name>
+              <description>Alternate function selection for port I/O pin 7
+</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>AF0</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>AF1</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x2</name>
+                  <description>AF2</description>
+                  <value>0x2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x3</name>
+                  <description>AF3</description>
+                  <value>0x3</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x4</name>
+                  <description>AF4</description>
+                  <value>0x4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x5</name>
+                  <description>AF5</description>
+                  <value>0x5</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x6</name>
+                  <description>AF6</description>
+                  <value>0x6</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x7</name>
+                  <description>AF7</description>
+                  <value>0x7</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x8</name>
+                  <description>AF8</description>
+                  <value>0x8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x9</name>
+                  <description>AF9</description>
+                  <value>0x9</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0xA</name>
+                  <description>AF10</description>
+                  <value>0xA</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0xB</name>
+                  <description>AF11</description>
+                  <value>0xB</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0xC</name>
+                  <description>AF12</description>
+                  <value>0xC</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0xD</name>
+                  <description>AF13</description>
+                  <value>0xD</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0xE</name>
+                  <description>AF14</description>
+                  <value>0xE</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0xF</name>
+                  <description>AF15</description>
+                  <value>0xF</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIOG_AFRH</name>
+          <displayName>GPIOG_AFRH</displayName>
+          <description>GPIO port G alternate function high register</description>
+          <addressOffset>0x024</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>AFSEL8</name>
+              <description>Alternate function selection for port I/O pin 8</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AFSEL9</name>
+              <description>Alternate function selection for port I/O pin 9</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AFSEL10</name>
+              <description>Alternate function selection for port I/O pin 10</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AFSEL11</name>
+              <description>Alternate function selection for port I/O pin 11</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AFSEL12</name>
+              <description>Alternate function selection for port I/O pin 12</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AFSEL13</name>
+              <description>Alternate function selection for port I/O pin 13</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AFSEL14</name>
+              <description>Alternate function selection for port I/O pin 14</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AFSEL15</name>
+              <description>Alternate function selection for port I/O pin 15
+</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>AF0</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>AF1</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x2</name>
+                  <description>AF2</description>
+                  <value>0x2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x3</name>
+                  <description>AF3</description>
+                  <value>0x3</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x4</name>
+                  <description>AF4</description>
+                  <value>0x4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x5</name>
+                  <description>AF5</description>
+                  <value>0x5</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x6</name>
+                  <description>AF6</description>
+                  <value>0x6</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x7</name>
+                  <description>AF7</description>
+                  <value>0x7</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x8</name>
+                  <description>AF8</description>
+                  <value>0x8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x9</name>
+                  <description>AF9</description>
+                  <value>0x9</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0xA</name>
+                  <description>AF10</description>
+                  <value>0xA</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0xB</name>
+                  <description>AF11</description>
+                  <value>0xB</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0xC</name>
+                  <description>AF12</description>
+                  <value>0xC</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0xD</name>
+                  <description>AF13</description>
+                  <value>0xD</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0xE</name>
+                  <description>AF14</description>
+                  <value>0xE</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0xF</name>
+                  <description>AF15</description>
+                  <value>0xF</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIOG_BRR</name>
+          <displayName>GPIOG_BRR</displayName>
+          <description>GPIO port G bit reset register</description>
+          <addressOffset>0x028</addressOffset>
+          <size>0x20</size>
+          <access>write-only</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>BR2</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Reset the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BR3</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Reset the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BR4</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Reset the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BR5</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Reset the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BR6</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Reset the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BR7</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Reset the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BR8</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Reset the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BR9</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Reset the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BR10</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Reset the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BR11</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Reset the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BR12</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Reset the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BR13</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Reset the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BR14</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Reset the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>BR15</name>
+              <description>Port reset I/O pin y
+</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>No action on the corresponding ODy bit</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>Reset the corresponding ODy bit</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIOG_HSLVR</name>
+          <displayName>GPIOG_HSLVR</displayName>
+          <description>GPIO port G high-speed low-voltage register</description>
+          <addressOffset>0x02C</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>HSLV2</name>
+              <description>Port G high-speed low-voltage configuration
+</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>I/O speed optimization disabled</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>I/O speed optimization enabled</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>HSLV3</name>
+              <description>Port G high-speed low-voltage configuration
+</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>I/O speed optimization disabled</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>I/O speed optimization enabled</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>HSLV4</name>
+              <description>Port G high-speed low-voltage configuration
+</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>I/O speed optimization disabled</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>I/O speed optimization enabled</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>HSLV5</name>
+              <description>Port G high-speed low-voltage configuration
+</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>I/O speed optimization disabled</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>I/O speed optimization enabled</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>HSLV6</name>
+              <description>Port G high-speed low-voltage configuration
+</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>I/O speed optimization disabled</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>I/O speed optimization enabled</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>HSLV7</name>
+              <description>Port G high-speed low-voltage configuration
+</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>I/O speed optimization disabled</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>I/O speed optimization enabled</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>HSLV8</name>
+              <description>Port G high-speed low-voltage configuration
+</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>I/O speed optimization disabled</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>I/O speed optimization enabled</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>HSLV9</name>
+              <description>Port G high-speed low-voltage configuration
+</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>I/O speed optimization disabled</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>I/O speed optimization enabled</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>HSLV10</name>
+              <description>Port G high-speed low-voltage configuration
+</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>I/O speed optimization disabled</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>I/O speed optimization enabled</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>HSLV11</name>
+              <description>Port G high-speed low-voltage configuration
+</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>I/O speed optimization disabled</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>I/O speed optimization enabled</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>HSLV12</name>
+              <description>Port G high-speed low-voltage configuration
+</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>I/O speed optimization disabled</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>I/O speed optimization enabled</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>HSLV13</name>
+              <description>Port G high-speed low-voltage configuration
+</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>I/O speed optimization disabled</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>I/O speed optimization enabled</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>HSLV14</name>
+              <description>Port G high-speed low-voltage configuration
+</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>I/O speed optimization disabled</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>I/O speed optimization enabled</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>HSLV15</name>
+              <description>Port G high-speed low-voltage configuration
+</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>I/O speed optimization disabled</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>I/O speed optimization enabled</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIOG_SECCFGR</name>
+          <displayName>GPIOG_SECCFGR</displayName>
+          <description>GPIO port G secure configuration register</description>
+          <addressOffset>0x030</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x0000FFFC</resetValue>
+          <resetMask>0xFFFFFFFF</resetMask>
+          <fields>
+            <field>
+              <name>SEC2</name>
+              <description>I/O pin of port secure bit enable y
+</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>The I/O pin is non-secure</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>The I/O pin is secure.</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>SEC3</name>
+              <description>I/O pin of port secure bit enable y
+</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>The I/O pin is non-secure</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>The I/O pin is secure.</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>SEC4</name>
+              <description>I/O pin of port secure bit enable y
+</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>The I/O pin is non-secure</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>The I/O pin is secure.</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>SEC5</name>
+              <description>I/O pin of port secure bit enable y
+</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>The I/O pin is non-secure</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>The I/O pin is secure.</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>SEC6</name>
+              <description>I/O pin of port secure bit enable y
+</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>The I/O pin is non-secure</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>The I/O pin is secure.</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>SEC7</name>
+              <description>I/O pin of port secure bit enable y
+</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>The I/O pin is non-secure</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>The I/O pin is secure.</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>SEC8</name>
+              <description>I/O pin of port secure bit enable y
+</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>The I/O pin is non-secure</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>The I/O pin is secure.</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>SEC9</name>
+              <description>I/O pin of port secure bit enable y
+</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>The I/O pin is non-secure</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>The I/O pin is secure.</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>SEC10</name>
+              <description>I/O pin of port secure bit enable y
+</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>The I/O pin is non-secure</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>The I/O pin is secure.</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>SEC11</name>
+              <description>I/O pin of port secure bit enable y
+</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>The I/O pin is non-secure</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>The I/O pin is secure.</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>SEC12</name>
+              <description>I/O pin of port secure bit enable y
+</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>The I/O pin is non-secure</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>The I/O pin is secure.</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>SEC13</name>
+              <description>I/O pin of port secure bit enable y
+</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>The I/O pin is non-secure</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>The I/O pin is secure.</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>SEC14</name>
+              <description>I/O pin of port secure bit enable y
+</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>The I/O pin is non-secure</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>The I/O pin is secure.</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>SEC15</name>
+              <description>I/O pin of port secure bit enable y
+</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>B_0x0</name>
+                  <description>The I/O pin is non-secure</description>
+                  <value>0x0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>B_0x1</name>
+                  <description>The I/O pin is secure.</description>
+                  <value>0x1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral derivedFrom="GPIOG">
+      <name>SEC_GPIOG</name>
+      <baseAddress>0x52021800</baseAddress>
     </peripheral>
     <peripheral>
       <name>GPIOH</name>
@@ -97118,7 +100112,7 @@ Flash ECC single error correction interrupt</description>
       </registers>
     </peripheral>
     <peripheral derivedFrom="I2C1">
-      <name>SEC_I2C</name>
+      <name>SEC_I2C1</name>
       <baseAddress>0x50005400</baseAddress>
     </peripheral>
     <peripheral derivedFrom="I2C1">
@@ -104767,7 +107761,7 @@ Flash ECC single error correction interrupt</description>
       </registers>
     </peripheral>
     <peripheral derivedFrom="LPUART1">
-      <name>SEC_LPUART</name>
+      <name>SEC_LPUART1</name>
       <baseAddress>0x56002400</baseAddress>
     </peripheral>
     <peripheral>
@@ -149670,7 +152664,7 @@ Flash ECC single error correction interrupt</description>
       </registers>
     </peripheral>
     <peripheral derivedFrom="SAI1">
-      <name>SEC_SAI</name>
+      <name>SEC_SAI1</name>
       <baseAddress>0x50015400</baseAddress>
     </peripheral>
     <peripheral>
@@ -151391,7 +154385,7 @@ Flash ECC single error correction interrupt</description>
       </registers>
     </peripheral>
     <peripheral derivedFrom="SPI1">
-      <name>SEC_SPI</name>
+      <name>SEC_SPI1</name>
       <baseAddress>0x50013000</baseAddress>
     </peripheral>
     <peripheral derivedFrom="SPI1">
@@ -180234,7 +183228,7 @@ Flash ECC single error correction interrupt</description>
       </registers>
     </peripheral>
     <peripheral derivedFrom="USART1">
-      <name>SEC_USART</name>
+      <name>SEC_USART1</name>
       <baseAddress>0x50013800</baseAddress>
     </peripheral>
     <peripheral derivedFrom="USART1">
