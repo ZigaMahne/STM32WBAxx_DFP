@@ -54,7 +54,7 @@ typedef          unsigned long     u64;
 #define DBGMCU          ((DBGMCU_TypeDef *) DBGMCU_BASE)
 #define FLASHSIZE_BASE    (0x0BFA07A0)
 
-static u32 bank1_addr=0x08100000;
+
 
 // Debug MCU
 typedef struct {
@@ -163,7 +163,7 @@ static u32 GetFlashSecureMode (void) {
   return (flashSecureMode);
 }
 
-static u32 GetFlashSize (void) {
+static u32 GetFlashBank (void) {
   u32 flashSize;
 
   flashSize = (*(u32*) FLASHSIZE_BASE);
@@ -172,6 +172,17 @@ static u32 GetFlashSize (void) {
 	
   return (flashSize);
 }
+
+static u32 GetFlashSize (void) {
+  u32 flashSize;
+
+  flashSize = (*(u32*) FLASHSIZE_BASE);
+	
+	flashSize=(((flashSize & 0xFFFF)*0x400));
+	
+  return (flashSize);
+}
+
 
 
 /*
@@ -215,8 +226,12 @@ static u32 PNBMASK_val (void) {
 	}
 	else
 		{
-			PNBMASK_val=(((((*(u32*)0x0BFA07A0) & 0xFFFF)*0x400)/2)/0x2000)-1;
-			
+			if((GetFlashSize()<0x200000)&&((FLASH->OPTR & 0x200000)==0x0))
+			{
+				PNBMASK_val=(((((*(u32*) 0xBF907A0) & 0xFFF)*0x400))/0x2000)-1;
+			}
+			else
+				PNBMASK_val=(((((*(u32*)0x0BFA07A0) & 0xFFFF)*0x400)/2)/0x2000)-1;
 		}
 	return (PNBMASK_val);
 }
@@ -450,8 +465,13 @@ int EraseSector (unsigned long adr) {
 		/* Dual-Bank Flash */
     if (GetFlashType() == 1U)
 		{ 		
-
-					 if(adr >= GetFlashSize()) // bank 2
+					if((GetFlashSize()<0x200000)&&((FLASH->OPTR & 0x200000)==0x0))
+					{
+						page = ((adr >>13) & PNBMASK_val() );   
+					}
+					else
+					{
+					 if(adr >= GetFlashBank()) // bank 2
 						{
 						page = (adr >>13);
 						page = page - (PNBMASK_val()+1);
@@ -467,6 +487,7 @@ int EraseSector (unsigned long adr) {
 						}
 
 		} 
+	}
 		else   /* Single-Bank Flash */
 		{
 			page = ((adr >>13) & PNBMASK_val() );   
@@ -503,21 +524,28 @@ int EraseSector (unsigned long adr) {
 	
   if (GetFlashType() == 1U)
 		{
-			 if(adr >= GetFlashSize()) // bank 2
-						{
-						page = (adr >>13);
-						page = page - (PNBMASK_val()+1);
-						page = page & PNBMASK_val();
-						/*Bank 2 Erase Selection*/          
-						FLASH->SECCR1 |= (FLASH_BKER);           
-						 }
-				else        // bank 1
-						{
-						 page = ((adr >>13) & PNBMASK_val() );
-						 /*Bank 1 Erase Selection*/
-						 FLASH->SECCR1 &= ~(FLASH_BKER);           
-						 }
-					} 
+			if((GetFlashSize()<0x200000)&&((FLASH->OPTR & 0x200000)==0x0))
+					{
+						page = ((adr >>13) & PNBMASK_val() );   
+					}
+			else
+					{
+					if(adr >= GetFlashBank()) // bank 2
+							{
+							page = (adr >>13);
+							page = page - (PNBMASK_val()+1);
+							page = page & PNBMASK_val();
+							/*Bank 2 Erase Selection*/          
+							FLASH->SECCR1 |= (FLASH_BKER);           
+							}
+					else        // bank 1
+							{
+							page = ((adr >>13) & PNBMASK_val() );
+							/*Bank 1 Erase Selection*/
+							FLASH->SECCR1 &= ~(FLASH_BKER);           
+							}
+						}
+					}					
 		else   /* Single-Bank Flash */
 		{
 		    page = ((adr >>13) & PNBMASK_val() );   
